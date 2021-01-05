@@ -8,6 +8,8 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 const WPS_URL = process.env.WPS_URL
 const WPS_COOKIE = process.env.WPS_COOKIE
 
+
+
 if(process.env.PUSH_KEY){
   SEND_KEY = process.env.PUSH_KEY
 }
