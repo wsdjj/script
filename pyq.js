@@ -76,8 +76,8 @@ if ($.isNode()) {
 //    pyqad = process.env.PYQAD.split()
 //   };
    
-    pyqUAArr.push(iPhone 11 14.4/4D3F5835-A9B9-4983-8FB5-E9ED3EF5875F/PingYouQuan1.1.2)
-    pyqadArr.push({"id":57,"sign":"A3D2QTNEMjZCNzU1Ng==6B7556","uid":414673,"token":"3f6e6ab63a7dad697799269522d5b1f6f40f081d63f1a741856e6e5b7a5f083b"})
+    pyqUAArr.push('iPhone 11 14.4/4D3F5835-A9B9-4983-8FB5-E9ED3EF5875F/PingYouQuan1.1.2')
+    pyqadArr.push('{"id":57,"sign":"A3D2QTNEMjZCNzU1Ng==6B7556","uid":414673,"token":"3f6e6ab63a7dad697799269522d5b1f6f40f081d63f1a741856e6e5b7a5f083b"}')
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  } else {
