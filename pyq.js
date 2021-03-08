@@ -55,26 +55,29 @@ if (isGetCookie) {
    $.done()
 } 
 if ($.isNode()) {
-   if (process.env.PYQUA && process.env.PYQUA.indexOf('#') > -1) {
-   pyqUA = process.env.PYQUA.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PYQUA && process.env.PYQUA.indexOf('\n') > -1) {
-   pyqUA = process.env.PYQUA.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   pyqUA = process.env.PYQUA.split()
-  };
-  if (process.env.PYQAD && process.env.PYQAD.indexOf('#') > -1) {
-   pyqad = process.env.PYQAD.split('#');
-   console.log(`您选择的是用"#"隔开\n`)
-  }
-  else if (process.env.PYQAD && process.env.PYQAD.indexOf('\n') > -1) {
-   pyqad = process.env.PYQAD.split('\n');
-   console.log(`您选择的是用换行隔开\n`)
-  } else {
-   pyqad = process.env.PYQAD.split()
-  };
+//    if (process.env.PYQUA && process.env.PYQUA.indexOf('#') > -1) {
+//    pyqUA = process.env.PYQUA.split('#');
+//    console.log(`您选择的是用"#"隔开\n`)
+//   }
+//   else if (process.env.PYQUA && process.env.PYQUA.indexOf('\n') > -1) {
+//    pyqUA = process.env.PYQUA.split('\n');
+//    console.log(`您选择的是用换行隔开\n`)
+//   } else {
+//    pyqUA = process.env.PYQUA.split()
+//   };
+//   if (process.env.PYQAD && process.env.PYQAD.indexOf('#') > -1) {
+//    pyqad = process.env.PYQAD.split('#');
+//    console.log(`您选择的是用"#"隔开\n`)
+//   }
+//   else if (process.env.PYQAD && process.env.PYQAD.indexOf('\n') > -1) {
+//    pyqad = process.env.PYQAD.split('\n');
+//    console.log(`您选择的是用换行隔开\n`)
+//   } else {
+//    pyqad = process.env.PYQAD.split()
+//   };
+   
+    pyqUAArr.push(iPhone 11 14.4/4D3F5835-A9B9-4983-8FB5-E9ED3EF5875F/PingYouQuan1.1.2)
+    pyqadArr.push($.getdata('pyqad'))
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  } else {
