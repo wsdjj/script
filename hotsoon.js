@@ -376,7 +376,7 @@ return new Promise((resolve, reject) => {
    })
   }
 //skill
-/*function skill() {
+function skill() {
 return new Promise((resolve, reject) => {
   let skillurl ={
     url: `https://i-hl.snssdk.com/luckycat/hotsoon/v1/wallet/profit_detail_page?income_type=2&num=50&${hotsoonsignheader}`,
@@ -396,7 +396,7 @@ return new Promise((resolve, reject) => {
     })
    })
   } 
-*/
+
 //看视频
 function watch_video(no) {
 return new Promise((resolve, reject) => {
