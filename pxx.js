@@ -26,12 +26,12 @@ let pxxbody = $.getdata('pxxbody')
 let pxx1body = $.getdata('pxx1body')
 if ($.isNode()) {
 
-rxmurl = process.env.rxmurl
-         rxmhd = process.env.rxmhd
-         rxmbody = process.env.rxmbody
-     pxxurlArr.push('http://apipx.jc8s.com:4022/Index/MianFeiPT')
-     pxxhdArr.push('{"Accept":"*/*","Origin":"http://apppx.jc8s.com:91","custom-header":"hello","Accept-Encoding":"gzip, deflate","Content-Type":"application/x-www-form-urlencoded","Host":"apipx.jc8s.com:4022","Connection":"keep-alive","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1","Referer":"http://apppx.jc8s.com:91/","Content-Length":"47","Accept-Language":"zh-cn"}')
-     pxxbodyArr.push('id=18282&token=14d8f44d635ee719fe34938c69273f3f')
+pxxurl = process.env.pxxurl
+         pxxhd = process.env.pxxhd
+         pxxbody = process.env.pxxbody
+//      pxxurlArr.push('http://apipx.jc8s.com:4022/Index/MianFeiPT')
+//      pxxhdArr.push('{"Accept":"*/*","Origin":"http://apppx.jc8s.com:91","custom-header":"hello","Accept-Encoding":"gzip, deflate","Content-Type":"application/x-www-form-urlencoded","Host":"apipx.jc8s.com:4022","Connection":"keep-alive","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1","Referer":"http://apppx.jc8s.com:91/","Content-Length":"47","Accept-Language":"zh-cn"}')
+//      pxxbodyArr.push('id=18282&token=14d8f44d635ee719fe34938c69273f3f')
     
 
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
