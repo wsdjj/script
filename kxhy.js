@@ -13,12 +13,20 @@ const logs =0;//0为关闭日志，1为开启
 var hour=''
 var minute=''
 if ($.isNode()) {
-   hour = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getHours();
-   minute = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getMinutes();
-}else{
-   hour = (new Date()).getHours();
-   minute = (new Date()).getMinutes();
-}
+//    hour = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getHours();
+//    minute = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getMinutes();
+// }else{
+//    hour = (new Date()).getHours();
+//    minute = (new Date()).getMinutes();
+// }
+   if ($.isNode()) {
+   kxhyheaderArr.push('{"bs":"CDMA","osVersion":"iOS%2014.40","pkgId":"229","Host":"bp-api.coohua.com","Accept-Encoding":"gzip, deflate, br","deviceId":"6D904FEA-DCAE-494D-9CE0-B157E5B760E5","gps":"default","Origin":"file://","brand":"Apple","channel":"AppStore","Connection":"keep-alive","accessKey":"434cf82aff6d086b6f61adb947abec44_209487383","appVersion":"1.0.3","romVersion":"iOS%2014.40","Accept-Language":"zh-cn","os":"iOS","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148","Content-Type":"application/json","Accept":"*/*","oaid":"","Content-Length":"37","wechatId":"default"}')
+  //  llydhdArr.push('{"Accept-Encoding":"gzip, deflate","Cookie":"ar=true; newuseract=1; newzb_u1957=%7B%22uid_code%22%3A%22x053cr3e90x994bz7d35rf88ct90edc0dafe05b3pebeccbcrtc%22%2C%22login_token%22%3A%2253%5D%28%5D3435545675%5D%28%5D64%5D%28%5D62%3B6753%5D%28%5D53%22%7D","Connection":"keep-alive","Referer":"http://v1uxnzj.cn/user1/tasks?check=","Accept":"application/json","Host":"v1uxnzj.cn","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/WIFI Language/zh_CN","Accept-Language":"zh-cn","X-Requested-With":"XMLHttpRequest"}')
+   
+
+    console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
+    console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
+  }
 //CK运行
 let isGetCookie = typeof $request !== 'undefined'
 if (isGetCookie) {
