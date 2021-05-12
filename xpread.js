@@ -47,18 +47,6 @@ const logs =0;//0为关闭日志，1为开启
 var hour=''
 var minute=''
 
-//CK运行
-let isGetCookie = typeof $request !== 'undefined'
-if (isGetCookie) {
-   GetCookie();
-   $.done()
-} 
-    xpreadCookieArr.push($.getdata('xpreadCookie'))
-    let xpreadcount = ($.getval('xpreadcount') || '1');
-  for (let i = 2; i <= xpreadcount; i++) {
-    xpreadCookieArr.push($.getdata(`xpreadCookie${i}`))
-  }
-
 if ($.isNode()) { 
 xpreadCookieArr.push('{"X-Requested-With":"XMLHttpRequest","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","Content-Type":"application/x-www-form-urlencoded; charset=UTF-8","Origin":"https://lrqd.wasair.com","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148","X-CSRF-TOKEN":"uXWmjm6Z9nz2UBZE2IdoCeAFK5WYEkn3Vlrzyq16","Cookie":"XSRF-TOKEN=eyJpdiI6InpDQ2xHMTZzTm5aY1dGWTBBeDZuQkE9PSIsInZhbHVlIjoickZjRzIzQTR4REUzZlZNaWNMQTlFXC8rZHBvMHhrODFDYVZDK0Y2VmRaM1hPaEpGd0xaRFpaalQ1NnVUTEhRT2VEcGtjODhYeEpza1FJTTlkRW1iNElRPT0iLCJtYWMiOiIwYmFhOWZjODMwYjE5NGNiYWI4NWZiNGFiNWVmMWQ5N2RhZTg5MmUyOTRhODE2NWFjNmVhYzRjMjQzYjI0NDQ0In0%3D; laravel_session=eyJpdiI6InkreWVLR0czU2o2N0tcL3VaVyt2Rzh3PT0iLCJ2YWx1ZSI6IjRwdVhIUmlzXC9ZdkJhU2tOZkJEREo4dWxCTkMrK3hrQ0VcLzlaZmNIUmwwbDZCWXRjWjVHc3JkU0VMYlB0bUJzNEliblRcL2RTdWhacjF2bGZWdWhNbkp3PT0iLCJtYWMiOiJiZjA2YjgyMjU1YzkxMTRhYWY5NzEwYjhhNTg4Y2U4NTRlYTk1MDljNTU1MjY3MzY5ZDRmNmZjNzQ2YzBkNjM0In0%3D; _idfa_device=eyJpdiI6IkQwK1VURHVOVW83bWMrVldvczdtMHc9PSIsInZhbHVlIjoiT0lrRW9PUHRWeW0xdHRtK0VWV1dEZz09IiwibWFjIjoiMTM1OTQ2YjFkNDhhYjEyM2IwMWNjZDRhZjVjNzQ1NDNiN2U4OGEzMzRiNDAxOTg0YWViYjU2MWJhYmFkNTRkZiJ9; _imei_device=eyJpdiI6Imo4aEhGTXJTNmhLY2syRTU3d21HYWc9PSIsInZhbHVlIjoiZUYxb0Q5Q0Q0VWZNaUlFNmVLVkk0Zz09IiwibWFjIjoiODQ5MDExM2IzMTFkZTU2MjM5ZDFjNmY1Y2U5ODYyYTJhYTBhYmIwY2U5MTI0MWUwMDNmNmEwNWYzYTAwODY5MCJ9; _source_into_value=eyJpdiI6IlBjSjJBU2RFSTExazRHaEF1S0J6WUE9PSIsInZhbHVlIjoiaVI2VkN1eFRqVnpsQTFRbFNKNWZJV1lkVFVXT1dpa3RSa0lIZ3o0dVNWQUJxVEZhR2I1eTRlWTRtTUc2S3pRMTJZQmZ6ZTZcL1hnaklpbkJCUUhXazNxTjBWcHRcLzhOSDFRUVwvTWdkbGM1ZVwvVjFUZzlLaXBSZWFjeE42ZnEyOWRQNHhnU2hZaVwvUDlWYkx6dk5KaEVzdmxGbHlkSU0zaDhRck5Na3NVSEJaM3VsUHJcL1A0TGNXeTF3eUFTUVMyeVwvbVpUenY5RzNNcm82QjQ5YXVsS1dLQUZIN1QwaGtIaTB4QlhjYVJleVVaK1E9IiwibWFjIjoiODI4M2M2MGIyZjEyMjRjMzA3ZjJhYjRhYjBjZTA4MzQzNzk3MDkxYmZkN2MzZTM1ZTM3MzMxYjYxZDM1OWNmNSJ9; _user_vip_identify=eyJpdiI6ImF1TlRNQ0MydWpKbFZxQUZ1K09RNHc9PSIsInZhbHVlIjoia09kZUdcL3QxVnNvWVRyVFFiMmwydkE9PSIsIm1hYyI6IjYzZGYzNzQwZTdkODU0ODJjNjg5N2MzMTZmYTBmYWFmNzQ5M2FkODFiOWNlZTc1MDFkYTY1YWFiNDU1NmYyYTAifQ%3D%3D; _user_vip_url=eyJpdiI6IisyV21ld3M0QUxLMjBvOXRkSitGWkE9PSIsInZhbHVlIjoiVWswN1o2OVRHS2NoeVNhU2dCMndrdz09IiwibWFjIjoiODhmZmQ3ZmVkNmU1ZjY0OGI0ZGU0YjdjN2RiMDZjYWNjOGU4MzMyZDgxZWZmNTMzZTIzNWM3MjMxYTliZWFhYyJ9","Referer":"https://lrqd.wasair.com/advert/task/con/transition","Host":"lrqd.wasair.com","Accept-Language":"zh-cn","Accept":"application/json, text/javascript, */*; q=0.01","Content-Length":"43"}') 
  //llydhdArr.push('{"Accept-Encoding":"gzip, deflate","Cookie":"ar=true; newuseract=1; newzb_u1957=%7B%22uid_code%22%3A%22x053cr3e90x994bz7d35rf88ct90edc0dafe05b3pebeccbcrtc%22%2C%22login_token%22%3A%2253%5D%28%5D3435545675%5D%28%5D64%5D%28%5D62%3B6753%5D%28%5D53%22%7D","Connection":"keep-alive","Referer":"http://v1uxnzj.cn/user1/tasks?check=","Accept":"application/json","Host":"v1uxnzj.cn","User-Agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000329) NetType/WIFI Language/zh_CN","Accept-Language":"zh-cn","X-Requested-With":"XMLHttpRequest"}') 
