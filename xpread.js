@@ -46,13 +46,7 @@ const invite=1;//新用户自动邀请，0关闭，1默认开启
 const logs =0;//0为关闭日志，1为开启
 var hour=''
 var minute=''
-if ($.isNode()) {
-   hour = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getHours();
-   minute = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getMinutes();
-}else{
-   hour = (new Date()).getHours();
-   minute = (new Date()).getMinutes();
-}
+
 //CK运行
 let isGetCookie = typeof $request !== 'undefined'
 if (isGetCookie) {
