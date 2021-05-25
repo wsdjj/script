@@ -27,5 +27,5 @@ jobs:
           iQIYI_COOKIE: ${{ secrets.iQIYI_COOKIE }}
           SEND_KEY: ${{ secrets.SEND_KEY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
-          SC_KEY: ${{ secrets.SC_KEY }}
+        
 
